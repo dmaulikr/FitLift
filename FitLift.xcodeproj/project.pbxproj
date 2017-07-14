@@ -8,13 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		743B033F1EC45BB300358042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B033E1EC45BB300358042 /* AppDelegate.swift */; };
-		743B03411EC45BB300358042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03401EC45BB300358042 /* ViewController.swift */; };
+		743B03411EC45BB300358042 /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03401EC45BB300358042 /* StartMenuViewController.swift */; };
 		743B03441EC45BB300358042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743B03421EC45BB300358042 /* Main.storyboard */; };
 		743B03471EC45BB300358042 /* FitLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 743B03451EC45BB300358042 /* FitLift.xcdatamodeld */; };
-		743B03491EC45BB300358042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743B03481EC45BB300358042 /* Assets.xcassets */; };
 		743B034C1EC45BB300358042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743B034A1EC45BB300358042 /* LaunchScreen.storyboard */; };
 		743B03571EC45BB300358042 /* FitLiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03561EC45BB300358042 /* FitLiftTests.swift */; };
 		743B03621EC45BB300358042 /* FitLiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03611EC45BB300358042 /* FitLiftUITests.swift */; };
+		743B03751EC45D0A00358042 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03721EC45D0A00358042 /* DemoCollectionViewCell.swift */; };
+		743B03761EC45D0A00358042 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743B03731EC45D0A00358042 /* DemoCollectionViewCell.xib */; };
+		743B03771EC45D0A00358042 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03741EC45D0A00358042 /* WorkoutsViewController.swift */; };
+		743B037A1EC45D1300358042 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03791EC45D1300358042 /* WorkoutsTableViewController.swift */; };
+		743B03871EC45D3400358042 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B037C1EC45D3400358042 /* Images.swift */; };
+		743B03881EC45D3400358042 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B037F1EC45D3400358042 /* CollectionViewHelper.swift */; };
+		743B03891EC45D3400358042 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03811EC45D3400358042 /* StoryboardHelper.swift */; };
+		743B038A1EC45D3400358042 /* AnimationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03841EC45D3400358042 /* AnimationBarButton.swift */; };
+		743B038B1EC45D3400358042 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03861EC45D3400358042 /* Rotatable.swift */; };
+		743B03A51EC45D4A00358042 /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B038E1EC45D4A00358042 /* ExpandingTableViewController.swift */; };
+		743B03A61EC45D4A00358042 /* BasePageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03921EC45D4A00358042 /* BasePageCollectionCell.swift */; };
+		743B03A71EC45D4A00358042 /* PageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03941EC45D4A00358042 /* PageCollectionLayout.swift */; };
+		743B03A81EC45D4A00358042 /* PageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03951EC45D4A00358042 /* PageCollectionView.swift */; };
+		743B03A91EC45D4A00358042 /* ExpandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03961EC45D4A00358042 /* ExpandingViewController.swift */; };
+		743B03AA1EC45D4A00358042 /* CornerAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B039A1EC45D4A00358042 /* CornerAnimatable.swift */; };
+		743B03AB1EC45D4A00358042 /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B039C1EC45D4A00358042 /* ConfigurationHelper.swift */; };
+		743B03AC1EC45D4A00358042 /* ConstraintsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B039E1EC45D4A00358042 /* ConstraintsHelper.swift */; };
+		743B03AD1EC45D4A00358042 /* ScreenShotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03A01EC45D4A00358042 /* ScreenShotHelper.swift */; };
+		743B03AE1EC45D4A00358042 /* SubviewsForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03A21EC45D4A00358042 /* SubviewsForEach.swift */; };
+		743B03AF1EC45D4A00358042 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03A41EC45D4A00358042 /* TransitionDriver.swift */; };
+		743B03B11EC45D8500358042 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743B03B01EC45D8500358042 /* Demo.storyboard */; };
+		743B03B31EC45DB100358042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743B03B21EC45DB100358042 /* Assets.xcassets */; };
+		749E6DDC1F04E260000A6F8A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DD91F04E260000A6F8A /* UIColor.swift */; };
+		749E6DDD1F04E260000A6F8A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DDA1F04E260000A6F8A /* UIImage.swift */; };
+		749E6DDE1F04E260000A6F8A /* ZAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DDB1F04E260000A6F8A /* ZAlertView.swift */; };
+		749E6DE01F0612AE000A6F8A /* DOAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DDF1F0612AE000A6F8A /* DOAlertController.swift */; };
+		749E6DE21F0F9557000A6F8A /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DE11F0F9557000A6F8A /* LoadingOverlay.swift */; };
+		74CD38C91ED207CB007A7D93 /* WeightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD38C81ED207CB007A7D93 /* WeightTextField.swift */; };
+		74D06D0F1EC7D05D000CEDE1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D06D0E1EC7D05D000CEDE1 /* Constants.swift */; };
+		74D0D95E1EC992760016A80F /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0D95D1EC992760016A80F /* WorkoutTableViewCell.swift */; };
+		74D0D9601EC9A1CC0016A80F /* BubbleRepCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0D95F1EC9A1CC0016A80F /* BubbleRepCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +67,9 @@
 /* Begin PBXFileReference section */
 		743B033B1EC45BB300358042 /* FitLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		743B033E1EC45BB300358042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		743B03401EC45BB300358042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		743B03401EC45BB300358042 /* StartMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
 		743B03431EC45BB300358042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		743B03461EC45BB300358042 /* FitLift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitLift.xcdatamodel; sourceTree = "<group>"; };
-		743B03481EC45BB300358042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		743B034B1EC45BB300358042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		743B034D1EC45BB300358042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		743B03521EC45BB300358042 /* FitLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +78,37 @@
 		743B035D1EC45BB300358042 /* FitLiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitLiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		743B03611EC45BB300358042 /* FitLiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitLiftUITests.swift; sourceTree = "<group>"; };
 		743B03631EC45BB300358042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		743B03721EC45D0A00358042 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
+		743B03731EC45D0A00358042 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
+		743B03741EC45D0A00358042 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
+		743B03791EC45D1300358042 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		743B037C1EC45D3400358042 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		743B037F1EC45D3400358042 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
+		743B03811EC45D3400358042 /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		743B03841EC45D3400358042 /* AnimationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBarButton.swift; sourceTree = "<group>"; };
+		743B03861EC45D3400358042 /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
+		743B038E1EC45D4A00358042 /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewController.swift; sourceTree = "<group>"; };
+		743B03921EC45D4A00358042 /* BasePageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageCollectionCell.swift; sourceTree = "<group>"; };
+		743B03941EC45D4A00358042 /* PageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionLayout.swift; sourceTree = "<group>"; };
+		743B03951EC45D4A00358042 /* PageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionView.swift; sourceTree = "<group>"; };
+		743B03961EC45D4A00358042 /* ExpandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingViewController.swift; sourceTree = "<group>"; };
+		743B039A1EC45D4A00358042 /* CornerAnimatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerAnimatable.swift; sourceTree = "<group>"; };
+		743B039C1EC45D4A00358042 /* ConfigurationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationHelper.swift; sourceTree = "<group>"; };
+		743B039E1EC45D4A00358042 /* ConstraintsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintsHelper.swift; sourceTree = "<group>"; };
+		743B03A01EC45D4A00358042 /* ScreenShotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenShotHelper.swift; sourceTree = "<group>"; };
+		743B03A21EC45D4A00358042 /* SubviewsForEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubviewsForEach.swift; sourceTree = "<group>"; };
+		743B03A41EC45D4A00358042 /* TransitionDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
+		743B03B01EC45D8500358042 /* Demo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Demo.storyboard; sourceTree = "<group>"; };
+		743B03B21EC45DB100358042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		749E6DD91F04E260000A6F8A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		749E6DDA1F04E260000A6F8A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		749E6DDB1F04E260000A6F8A /* ZAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAlertView.swift; sourceTree = "<group>"; };
+		749E6DDF1F0612AE000A6F8A /* DOAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOAlertController.swift; sourceTree = "<group>"; };
+		749E6DE11F0F9557000A6F8A /* LoadingOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadingOverlay.swift; path = FitLift/LoadingOverlay.swift; sourceTree = SOURCE_ROOT; };
+		74CD38C81ED207CB007A7D93 /* WeightTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightTextField.swift; sourceTree = "<group>"; };
+		74D06D0E1EC7D05D000CEDE1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74D0D95D1EC992760016A80F /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		74D0D95F1EC9A1CC0016A80F /* BubbleRepCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRepCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				743B033D1EC45BB300358042 /* FitLift */,
+				743B03701EC45D0A00358042 /* ExpandingView */,
 				743B03551EC45BB300358042 /* FitLiftTests */,
 				743B03601EC45BB300358042 /* FitLiftUITests */,
 				743B033C1EC45BB300358042 /* Products */,
@@ -99,11 +160,15 @@
 		743B033D1EC45BB300358042 /* FitLift */ = {
 			isa = PBXGroup;
 			children = (
+				74D06D0E1EC7D05D000CEDE1 /* Constants.swift */,
 				743B033E1EC45BB300358042 /* AppDelegate.swift */,
-				743B03401EC45BB300358042 /* ViewController.swift */,
+				749E6DD81F04E24F000A6F8A /* ZAlert */,
+				743B036F1EC45C1800358042 /* Controllers */,
 				743B03421EC45BB300358042 /* Main.storyboard */,
-				743B03481EC45BB300358042 /* Assets.xcassets */,
+				74D0D9611EC9A1D00016A80F /* Controls */,
+				749E6DE11F0F9557000A6F8A /* LoadingOverlay.swift */,
 				743B034A1EC45BB300358042 /* LaunchScreen.storyboard */,
+				743B03B21EC45DB100358042 /* Assets.xcassets */,
 				743B034D1EC45BB300358042 /* Info.plist */,
 				743B03451EC45BB300358042 /* FitLift.xcdatamodeld */,
 			);
@@ -126,6 +191,248 @@
 				743B03631EC45BB300358042 /* Info.plist */,
 			);
 			path = FitLiftUITests;
+			sourceTree = "<group>";
+		};
+		743B036F1EC45C1800358042 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				749E6DDF1F0612AE000A6F8A /* DOAlertController.swift */,
+				743B03401EC45BB300358042 /* StartMenuViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		743B03701EC45D0A00358042 /* ExpandingView */ = {
+			isa = PBXGroup;
+			children = (
+				743B03B01EC45D8500358042 /* Demo.storyboard */,
+				743B038C1EC45D4A00358042 /* Source */,
+				743B037B1EC45D3400358042 /* Constants */,
+				743B037D1EC45D3400358042 /* Helpers */,
+				743B03821EC45D3400358042 /* Views */,
+				743B03781EC45D1300358042 /* DemoTableViewController */,
+				743B03711EC45D0A00358042 /* Cells */,
+				743B03741EC45D0A00358042 /* WorkoutsViewController.swift */,
+			);
+			name = ExpandingView;
+			path = DemoViewController;
+			sourceTree = "<group>";
+		};
+		743B03711EC45D0A00358042 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				743B03721EC45D0A00358042 /* DemoCollectionViewCell.swift */,
+				743B03731EC45D0A00358042 /* DemoCollectionViewCell.xib */,
+				74D0D95D1EC992760016A80F /* WorkoutTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		743B03781EC45D1300358042 /* DemoTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				743B03791EC45D1300358042 /* WorkoutsTableViewController.swift */,
+			);
+			path = DemoTableViewController;
+			sourceTree = "<group>";
+		};
+		743B037B1EC45D3400358042 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				743B037C1EC45D3400358042 /* Images.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		743B037D1EC45D3400358042 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				743B037E1EC45D3400358042 /* CollectionViewHelper */,
+				743B03801EC45D3400358042 /* StoryboardHelper */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		743B037E1EC45D3400358042 /* CollectionViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				743B037F1EC45D3400358042 /* CollectionViewHelper.swift */,
+			);
+			path = CollectionViewHelper;
+			sourceTree = "<group>";
+		};
+		743B03801EC45D3400358042 /* StoryboardHelper */ = {
+			isa = PBXGroup;
+			children = (
+				743B03811EC45D3400358042 /* StoryboardHelper.swift */,
+			);
+			path = StoryboardHelper;
+			sourceTree = "<group>";
+		};
+		743B03821EC45D3400358042 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				743B03831EC45D3400358042 /* AnimatingBarButton */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		743B03831EC45D3400358042 /* AnimatingBarButton */ = {
+			isa = PBXGroup;
+			children = (
+				743B03841EC45D3400358042 /* AnimationBarButton.swift */,
+				743B03851EC45D3400358042 /* Animations */,
+			);
+			path = AnimatingBarButton;
+			sourceTree = "<group>";
+		};
+		743B03851EC45D3400358042 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				743B03861EC45D3400358042 /* Rotatable.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		743B038C1EC45D4A00358042 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				743B038D1EC45D4A00358042 /* ExpandingTableViewController */,
+				743B038F1EC45D4A00358042 /* ExpandingViewController */,
+				743B03971EC45D4A00358042 /* Helpers */,
+				743B03A31EC45D4A00358042 /* TransitionDriver */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		743B038D1EC45D4A00358042 /* ExpandingTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				743B038E1EC45D4A00358042 /* ExpandingTableViewController.swift */,
+			);
+			path = ExpandingTableViewController;
+			sourceTree = "<group>";
+		};
+		743B038F1EC45D4A00358042 /* ExpandingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				743B03901EC45D4A00358042 /* CollectionView */,
+				743B03961EC45D4A00358042 /* ExpandingViewController.swift */,
+			);
+			path = ExpandingViewController;
+			sourceTree = "<group>";
+		};
+		743B03901EC45D4A00358042 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				743B03911EC45D4A00358042 /* Cells */,
+				743B03931EC45D4A00358042 /* Layout */,
+				743B03951EC45D4A00358042 /* PageCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		743B03911EC45D4A00358042 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				743B03921EC45D4A00358042 /* BasePageCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		743B03931EC45D4A00358042 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				743B03941EC45D4A00358042 /* PageCollectionLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		743B03971EC45D4A00358042 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				743B03981EC45D4A00358042 /* Animations */,
+				743B039B1EC45D4A00358042 /* ConfigurationHelper */,
+				743B039D1EC45D4A00358042 /* Constraints Helpers */,
+				743B039F1EC45D4A00358042 /* ScreenShot */,
+				743B03A11EC45D4A00358042 /* SubviewsForEach */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		743B03981EC45D4A00358042 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				743B03991EC45D4A00358042 /* CornerAnimatable */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		743B03991EC45D4A00358042 /* CornerAnimatable */ = {
+			isa = PBXGroup;
+			children = (
+				743B039A1EC45D4A00358042 /* CornerAnimatable.swift */,
+			);
+			path = CornerAnimatable;
+			sourceTree = "<group>";
+		};
+		743B039B1EC45D4A00358042 /* ConfigurationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				743B039C1EC45D4A00358042 /* ConfigurationHelper.swift */,
+			);
+			path = ConfigurationHelper;
+			sourceTree = "<group>";
+		};
+		743B039D1EC45D4A00358042 /* Constraints Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				743B039E1EC45D4A00358042 /* ConstraintsHelper.swift */,
+			);
+			path = "Constraints Helpers";
+			sourceTree = "<group>";
+		};
+		743B039F1EC45D4A00358042 /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				743B03A01EC45D4A00358042 /* ScreenShotHelper.swift */,
+			);
+			path = ScreenShot;
+			sourceTree = "<group>";
+		};
+		743B03A11EC45D4A00358042 /* SubviewsForEach */ = {
+			isa = PBXGroup;
+			children = (
+				743B03A21EC45D4A00358042 /* SubviewsForEach.swift */,
+			);
+			path = SubviewsForEach;
+			sourceTree = "<group>";
+		};
+		743B03A31EC45D4A00358042 /* TransitionDriver */ = {
+			isa = PBXGroup;
+			children = (
+				743B03A41EC45D4A00358042 /* TransitionDriver.swift */,
+			);
+			path = TransitionDriver;
+			sourceTree = "<group>";
+		};
+		749E6DD81F04E24F000A6F8A /* ZAlert */ = {
+			isa = PBXGroup;
+			children = (
+				749E6DD91F04E260000A6F8A /* UIColor.swift */,
+				749E6DDA1F04E260000A6F8A /* UIImage.swift */,
+				749E6DDB1F04E260000A6F8A /* ZAlertView.swift */,
+			);
+			name = ZAlert;
+			sourceTree = "<group>";
+		};
+		74D0D9611EC9A1D00016A80F /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				74D0D95F1EC9A1CC0016A80F /* BubbleRepCounter.swift */,
+				74CD38C81ED207CB007A7D93 /* WeightTextField.swift */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +504,7 @@
 					743B033A1EC45BB300358042 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = DGWMVQ89JR;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					743B03511EC45BB300358042 = {
@@ -239,8 +547,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				743B034C1EC45BB300358042 /* LaunchScreen.storyboard in Resources */,
-				743B03491EC45BB300358042 /* Assets.xcassets in Resources */,
+				743B03B11EC45D8500358042 /* Demo.storyboard in Resources */,
 				743B03441EC45BB300358042 /* Main.storyboard in Resources */,
+				743B03761EC45D0A00358042 /* DemoCollectionViewCell.xib in Resources */,
+				743B03B31EC45DB100358042 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +575,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				743B03411EC45BB300358042 /* ViewController.swift in Sources */,
+				743B03AB1EC45D4A00358042 /* ConfigurationHelper.swift in Sources */,
+				743B03A71EC45D4A00358042 /* PageCollectionLayout.swift in Sources */,
+				749E6DE21F0F9557000A6F8A /* LoadingOverlay.swift in Sources */,
+				74D0D9601EC9A1CC0016A80F /* BubbleRepCounter.swift in Sources */,
+				743B03891EC45D3400358042 /* StoryboardHelper.swift in Sources */,
+				743B03871EC45D3400358042 /* Images.swift in Sources */,
+				743B03AA1EC45D4A00358042 /* CornerAnimatable.swift in Sources */,
+				743B03A51EC45D4A00358042 /* ExpandingTableViewController.swift in Sources */,
+				743B038A1EC45D3400358042 /* AnimationBarButton.swift in Sources */,
+				743B03A91EC45D4A00358042 /* ExpandingViewController.swift in Sources */,
+				74CD38C91ED207CB007A7D93 /* WeightTextField.swift in Sources */,
+				749E6DDE1F04E260000A6F8A /* ZAlertView.swift in Sources */,
+				743B03411EC45BB300358042 /* StartMenuViewController.swift in Sources */,
 				743B03471EC45BB300358042 /* FitLift.xcdatamodeld in Sources */,
+				743B037A1EC45D1300358042 /* WorkoutsTableViewController.swift in Sources */,
+				749E6DDD1F04E260000A6F8A /* UIImage.swift in Sources */,
+				743B03AC1EC45D4A00358042 /* ConstraintsHelper.swift in Sources */,
+				743B03881EC45D3400358042 /* CollectionViewHelper.swift in Sources */,
 				743B033F1EC45BB300358042 /* AppDelegate.swift in Sources */,
+				743B038B1EC45D3400358042 /* Rotatable.swift in Sources */,
+				743B03AD1EC45D4A00358042 /* ScreenShotHelper.swift in Sources */,
+				743B03A61EC45D4A00358042 /* BasePageCollectionCell.swift in Sources */,
+				743B03751EC45D0A00358042 /* DemoCollectionViewCell.swift in Sources */,
+				743B03AF1EC45D4A00358042 /* TransitionDriver.swift in Sources */,
+				74D0D95E1EC992760016A80F /* WorkoutTableViewCell.swift in Sources */,
+				749E6DDC1F04E260000A6F8A /* UIColor.swift in Sources */,
+				749E6DE01F0612AE000A6F8A /* DOAlertController.swift in Sources */,
+				743B03AE1EC45D4A00358042 /* SubviewsForEach.swift in Sources */,
+				74D06D0F1EC7D05D000CEDE1 /* Constants.swift in Sources */,
+				743B03771EC45D0A00358042 /* WorkoutsViewController.swift in Sources */,
+				743B03A81EC45D4A00358042 /* PageCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,11 +757,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DGWMVQ89JR;
 				INFOPLIST_FILE = FitLift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gerald.FitLift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -432,8 +773,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = DGWMVQ89JR;
 				INFOPLIST_FILE = FitLift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gerald.FitLift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +861,7 @@
 				743B03681EC45BB300358042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		743B03691EC45BB300358042 /* Build configuration list for PBXNativeTarget "FitLiftTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +870,7 @@
 				743B036B1EC45BB300358042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		743B036C1EC45BB300358042 /* Build configuration list for PBXNativeTarget "FitLiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +879,7 @@
 				743B036E1EC45BB300358042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
