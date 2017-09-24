@@ -11,20 +11,23 @@ import CoreData
 
 class WorkoutsTableViewController: ExpandingTableViewController {
   
-  var tapTimer: Timer?
-  var workout: Workout = allWorkouts[0] //Set by the previous viewcontroller
+  var tapTimer: Timer = Timer()
+  var routineIndex: Int8 = 0  //Set by the previous viewcontroller, 0 by default
+  var workout: Workout = allWorkouts[0] //Set by the previous viewcontroller, 0 by default
   
-  var previousWorkout: Workout?
+  //nil if the user has not done this workout previously
+  var previousWorkout: SavedWorkout?
   var previousCompletionCounter: [Bool]?
   
-  var currentCompletionCounter: [Bool]
-  var currentWorkoutRoutine: Int = 0
+  var currentCompletionCounter: [Bool] = []
+  var currentWorkoutRoutine: Int = 0 //Set by the previous viewcontroller, 0 by default
+  
+  //User input storage
+  var bubbleCounterInputData: [[Int]] = []  //Stores the values of the bubbleCounters so they are not lost on dequeue
+  var weightsForTextFields: [Float] = []
   
   //CoreData variables
-  let appDelegate = UIApplication.shared.delegate as! AppDelegate
-  let moc: NSManagedObjectContext
-  let entity: NSEntityDescription
-  let item: NSManagedObject
+  
   
   fileprivate var scrollOffsetY: CGFloat = 0
   
@@ -36,48 +39,17 @@ class WorkoutsTableViewController: ExpandingTableViewController {
     let image1 = Asset.backgroundImage.image
     tableView.backgroundView = UIImageView(image: image1)
     
-    //    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    //    let context = appDelegate.managedObjectContext
-    
-    //    let entity = NSEntityDescription.entity(forEntityName: "SavedWorkout", in: context)
-    //    let item = NSManagedObject(entity: entity!, insertInto: context)
-    //
-    //    item.setValue(Date() as NSDate, forKey: "date")
-    //
-    //    do {
-    //      try context.save()
-    //      print("data saved")
-    //    } catch {
-    //      print("saving error")
-    //    }
-    
+    // The two variables below store user info when each cell is dequeued
+    weightsForTextFields = [Float](repeating: 0.0, count: workout.routine[currentWorkoutRoutine].exercises.count)
+    currentCompletionCounter = [Bool](repeating: false, count: workout.routine[currentWorkoutRoutine].exercises.count)
+    for exercise in workout.routine[currentWorkoutRoutine].exercises {
+      
+      bubbleCounterInputData.append([Int](repeating: 0, count: exercise.sets))
+    }
     print("Current workout: \(workout.name)")
   }
   
   required init?(coder aDecoder: NSCoder) {
-    
-    moc = appDelegate.managedObjectContext
-    entity = NSEntityDescription.entity(forEntityName: "SavedWorkout", in: moc)!
-    item = NSManagedObject(entity: entity, insertInto: moc)
-    
-    
-    let workoutSearch = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedWorkout")
-    var allSavedWorkouts: [SavedWorkout] = []
-    do {
-      allSavedWorkouts = try moc.fetch(workoutSearch) as! [SavedWorkout]
-    } catch {
-      print("Fetching workouts Error")
-    }
-    
-    for previousWorkout in allSavedWorkouts {
-      if let _ = previousWorkout.date {
-        print("previous workout had a date")
-      } else {
-        print("previous workout did not have a date")
-      }
-    }
-    
-    currentCompletionCounter = [Bool](repeating: false, count: workout.routine[currentWorkoutRoutine].exercises.count)
     
     super.init(coder: aDecoder)
   }
@@ -87,14 +59,26 @@ class WorkoutsTableViewController: ExpandingTableViewController {
   
   @IBAction func doneButtonpressed(_ sender: UIBarButtonItem) {
     
-    print("Done button pressed")
+    for i in 0...workout.routine[currentWorkoutRoutine].exercises.count - 1 {
+      workout.routine[currentWorkoutRoutine].exercises[i].weight = weightsForTextFields[i]
+    }
+    
+    saveData()
+    popTransitionAnimation()
+  }
+  
+  @IBAction func weightsDoneEditing(_ sender: Any) {
+    
+    let weightTextView = sender as! WeightTextField
+    let cell = weightTextView.superview!.superview as! WorkoutTableViewCell
+    let row = tableView.indexPath(for: cell)!.row
+    
+    weightsForTextFields[row] = weightTextView.weight
+    workout.routine[currentWorkoutRoutine].exercises[row].weight = weightTextView.weight
+    
+    print("User finished editing weight at row: \(row)")
     
   }
-  
-  @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
-    print("Cancel button pressed")
-  }
-  
 }
 // MARK: Helpers
 
@@ -112,6 +96,9 @@ extension WorkoutsTableViewController {
   
   @IBAction func backButtonHandler(_ sender: AnyObject) {
     // buttonAnimation
+    
+    print("Cancel button pressed")
+    
     let viewControllers: [WorkoutsViewController?] = navigationController?.viewControllers.map { $0 as? WorkoutsViewController } ?? []
     
     for viewController in viewControllers {
@@ -179,11 +166,12 @@ extension WorkoutsTableViewController {
     
     for i in 1...exerciseRoutine.sets {
       
-      let bubbleCounter = BubbleRepCounter(reps: 5)
+      let bubbleCounter = BubbleRepCounter(reps: exerciseRoutine.reps)
       bubbleCounter.exerciseRoutine = exerciseRoutine
       bubbleCounter.backgroundColor = UIColor.clear
       bubbleCounter.frame = CGRect(x: cell.frame.width - bubbleCounter.frame.width - 10, y: cell.frame.height - bubbleCounter.frame.height*CGFloat(i) - 8*CGFloat(i), width: bubbleCounter.bounds.width, height: bubbleCounter.bounds.height)
       bubbleCounter.tag = i
+      bubbleCounter.filledReps = bubbleCounterInputData[indexPath.row][bubbleCounter.tag - 1]
       
       let touchRecognizer = UITapGestureRecognizer(target: self, action: #selector(bubblePressed(_:)))
       touchRecognizer.numberOfTapsRequired = 1
@@ -200,17 +188,36 @@ extension WorkoutsTableViewController {
     cell.nameLabel.text = exercise.name
     cell.setsLabel.text = "\(exerciseRoutine.sets)x\(exerciseRoutine.reps)"
     
+    if previousWorkout != nil && previousCompletionCounter != nil {
+      if previousWorkout!.completionCounter[indexPath.row] {
+        cell.weightTextField.text = "\(previousWorkout!.workout.routine[previousWorkout!.routineIndex].exercises[indexPath.row].weight + previousWorkout!.workout.routine[previousWorkout!.routineIndex].exercises[indexPath.row].increaseWeightAmount)"
+        weightsForTextFields[indexPath.row] = previousWorkout!.workout.routine[previousWorkout!.routineIndex].exercises[indexPath.row].weight + previousWorkout!.workout.routine[previousWorkout!.routineIndex].exercises[indexPath.row].increaseWeightAmount
+      } else {
+        cell.weightTextField.text = "\(previousWorkout!.workout.routine[previousWorkout!.routineIndex].exercises[indexPath.row].weight)"
+        weightsForTextFields[indexPath.row] = previousWorkout!.workout.routine[previousWorkout!.routineIndex].exercises[indexPath.row].weight
+      }
+    }
+    else {
+      cell.weightTextField.text = "\(workout.routine[currentWorkoutRoutine].exercises[indexPath.row].weight)"
+      weightsForTextFields[indexPath.row] = workout.routine[currentWorkoutRoutine].exercises[indexPath.row].weight
+    }
+    
+    let _ = cell.weightTextField.textFieldShouldReturn(cell.weightTextField)
+    
     return cell
   }
   
   func bubblePressed(_ sender: UITapGestureRecognizer) {
     
     let bubble = sender.view as! BubbleRepCounter
+    let cell = bubble.superview! as! WorkoutTableViewCell
+    let row = tableView.indexPath(for: cell)!.row
     let alertDialogTimeDelay = 0.4
     
     bubble.changeFilledReps()
+    bubbleCounterInputData[row][bubble.tag - 1] = bubble.filledReps
     
-    tapTimer?.invalidate()
+    tapTimer.invalidate()
     tapTimer = Timer.scheduledTimer(timeInterval: alertDialogTimeDelay, target: self, selector: #selector(self.displayWorkoutFinishedDialog(_:)), userInfo: bubble, repeats: false)
     
   }
@@ -222,6 +229,8 @@ extension WorkoutsTableViewController {
     
     var attemptedSets = 0
     var completedSets = 0
+    
+    currentCompletionCounter[self.tableView.indexPath(for: cell)!.row] = false
     
     for subview in cell.subviews {  //Find how many sets have been attempted vs completed
       if subview is BubbleRepCounter {
@@ -244,6 +253,8 @@ extension WorkoutsTableViewController {
     if attemptedSets == bubbleCounter.exerciseRoutine?.sets {
       if completedSets == bubbleCounter.exerciseRoutine?.sets { //Exercise completed successfully
         alertController = DOAlertController(title: "Exercise Complete!", message: "Increase weight by \(bubbleCounter.exerciseRoutine!.increaseWeightAmount)kg for your next workout", preferredStyle: .alert, restPeriodRemaining: bubbleCounter.exerciseRoutine!.restPeriod)
+        
+        currentCompletionCounter[self.tableView.indexPath(for: cell)!.row] = true
       } else {  //Exercise completed unsuccessfully
         alertController = DOAlertController(title: "Exercise Complete!", message: "Repeat the same weight next time", preferredStyle: .alert, restPeriodRemaining: bubbleCounter.exerciseRoutine!.restPeriod)
       }
@@ -290,4 +301,30 @@ extension WorkoutsTableViewController {
       sender.invalidate()
     }
   }
+  
+  func saveData() {
+    
+    print("Attempting to save data")
+    
+    let savedWorkout = SavedWorkout(workout: workout, completionCounter: currentCompletionCounter, date: NSDate(), routineIndex: currentWorkoutRoutine)
+    let encodedData = NSKeyedArchiver.archivedData(withRootObject: savedWorkout)
+    print("encodedData: \(encodedData)")
+    
+    let userDefaults: UserDefaults = UserDefaults.standard
+    userDefaults.set(encodedData, forKey: "savedWorkout")
+    userDefaults.synchronize()
+    
+    //testSavedData()
+  }
+  
+  func testSavedData() {
+    
+    if let data = UserDefaults.standard.data(forKey: "savedWorkout"),
+      let lastWorkout = NSKeyedUnarchiver.unarchiveObject(with: data) as? SavedWorkout {
+      print(lastWorkout.workout.routine)
+    } else {
+      print("There is an issue")
+    }
+  }
 }
+

@@ -48,7 +48,7 @@ extension UIImage {
             return nil
         }
         if maskImage != nil && maskImage!.cgImage == nil {
-            print("*** error: maskImage must be backed by a CGImage: \(maskImage)")
+            print("*** error: maskImage must be backed by a CGImage: \(maskImage!)")
             return nil
         }
         
@@ -101,7 +101,7 @@ extension UIImage {
                 //
                 
                 let inputRadius = blurRadius * screenScale
-                let calculateRadius = floor(inputRadius * 3.0 * CGFloat(sqrt(2 * M_PI)) / 4 + 0.5)
+                let calculateRadius = floor(inputRadius * 3.0 * CGFloat(sqrt(2 * .pi)) / 4 + 0.5)
                 var radius = UInt32(calculateRadius)
                 if radius % 2 != 1 {
                     radius += 1 // force radius to be odd so that the three box-blur methodology works.

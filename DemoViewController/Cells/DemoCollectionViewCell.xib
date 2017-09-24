@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,53 +20,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-6U-uYZ">
                         <rect key="frame" x="0.0" y="0.0" width="256" height="335"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons" translatesAutoresizingMaskIntoConstraints="NO" id="7zK-Le-Npw">
-                                <rect key="frame" x="20" y="287" width="116" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="workoutDescriptionLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dv4-dP-B5a">
+                                <rect key="frame" x="8" y="257" width="240" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="7hq-gd-WaT"/>
-                                    <constraint firstAttribute="height" constant="40" id="cUH-6u-zMD"/>
+                                    <constraint firstAttribute="height" constant="70" id="9UF-tI-EuB"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="Au6-h8-xBa">
-                                <rect key="frame" x="228" y="297.5" width="4" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="KJW-6L-1Ol"/>
-                                    <constraint firstAttribute="width" constant="4" id="YcW-cL-JpF"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="l9V-6B-rdj">
-                                <rect key="frame" x="159" y="265.5" width="77" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="Nl5-u6-NGX"/>
-                                    <constraint firstAttribute="width" constant="77" id="NwE-fo-yyB"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO. 7911847" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-Qa-ClW">
-                                <rect key="frame" x="24" y="265" width="67.5" height="13.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="0.49803921568627452" green="0.51764705882352935" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Crescenta-Montrose, CA91020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC4-wU-lTH">
-                                <rect key="frame" x="39" y="240.5" width="178.5" height="13.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="0.49803921569999998" green="0.51764705879999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Au6-h8-xBa" firstAttribute="top" secondItem="l9V-6B-rdj" secondAttribute="bottom" constant="20" id="1qd-Em-ZT9"/>
-                            <constraint firstItem="pMH-Qa-ClW" firstAttribute="leading" secondItem="rbd-6U-uYZ" secondAttribute="leading" constant="24" id="7zn-VD-NCK"/>
-                            <constraint firstAttribute="trailing" secondItem="l9V-6B-rdj" secondAttribute="trailing" constant="20" id="Bx8-Es-m5m"/>
-                            <constraint firstAttribute="trailing" secondItem="Au6-h8-xBa" secondAttribute="trailing" constant="24" id="Eiq-Mk-Msj"/>
-                            <constraint firstItem="eC4-wU-lTH" firstAttribute="centerX" secondItem="rbd-6U-uYZ" secondAttribute="centerX" id="GPf-gb-s8O"/>
-                            <constraint firstAttribute="bottom" secondItem="eC4-wU-lTH" secondAttribute="bottom" constant="81" id="IBD-EA-167"/>
-                            <constraint firstItem="7zK-Le-Npw" firstAttribute="leading" secondItem="rbd-6U-uYZ" secondAttribute="leading" constant="20" id="TPF-bw-RZD"/>
-                            <constraint firstItem="pMH-Qa-ClW" firstAttribute="centerY" secondItem="l9V-6B-rdj" secondAttribute="centerY" id="VJk-xM-6CG"/>
+                            <constraint firstAttribute="trailing" secondItem="Dv4-dP-B5a" secondAttribute="trailing" constant="8" id="1eA-pa-EOK"/>
+                            <constraint firstItem="Dv4-dP-B5a" firstAttribute="leading" secondItem="rbd-6U-uYZ" secondAttribute="leading" constant="8" id="2Eb-p8-2Z5"/>
                             <constraint firstAttribute="width" constant="256" id="bOS-YB-1Lf"/>
-                            <constraint firstItem="Au6-h8-xBa" firstAttribute="centerY" secondItem="7zK-Le-Npw" secondAttribute="centerY" id="pmY-wA-X0z"/>
-                            <constraint firstAttribute="bottom" secondItem="7zK-Le-Npw" secondAttribute="bottom" constant="8" id="rz8-al-BzK"/>
+                            <constraint firstAttribute="bottom" secondItem="Dv4-dP-B5a" secondAttribute="bottom" constant="8" id="pu8-Qc-Sut"/>
                             <constraint firstAttribute="height" constant="335" id="uVN-GL-ji7"/>
                         </constraints>
                     </view>
@@ -174,14 +142,12 @@
                 <outlet property="frontContainerView" destination="4h2-Xv-xjU" id="Mxy-UR-phd"/>
                 <outlet property="leftView" destination="ZG8-y8-Dfi" id="4iO-DM-mKx"/>
                 <outlet property="rightView" destination="zmS-RM-seQ" id="8gi-Ov-dy3"/>
+                <outlet property="workoutDescriptionLabel" destination="Dv4-dP-B5a" id="tKv-BJ-szU"/>
             </connections>
             <point key="canvasLocation" x="547" y="515.5"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="dots" width="4" height="19"/>
-        <image name="icons" width="116" height="39"/>
         <image name="item0" width="414" height="736"/>
-        <image name="stars" width="77" height="11"/>
     </resources>
 </document>

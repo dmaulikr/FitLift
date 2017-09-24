@@ -10,7 +10,6 @@
 		743B033F1EC45BB300358042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B033E1EC45BB300358042 /* AppDelegate.swift */; };
 		743B03411EC45BB300358042 /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03401EC45BB300358042 /* StartMenuViewController.swift */; };
 		743B03441EC45BB300358042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743B03421EC45BB300358042 /* Main.storyboard */; };
-		743B03471EC45BB300358042 /* FitLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 743B03451EC45BB300358042 /* FitLift.xcdatamodeld */; };
 		743B034C1EC45BB300358042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743B034A1EC45BB300358042 /* LaunchScreen.storyboard */; };
 		743B03571EC45BB300358042 /* FitLiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03561EC45BB300358042 /* FitLiftTests.swift */; };
 		743B03621EC45BB300358042 /* FitLiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03611EC45BB300358042 /* FitLiftUITests.swift */; };
@@ -36,6 +35,7 @@
 		743B03AF1EC45D4A00358042 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B03A41EC45D4A00358042 /* TransitionDriver.swift */; };
 		743B03B11EC45D8500358042 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743B03B01EC45D8500358042 /* Demo.storyboard */; };
 		743B03B31EC45DB100358042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743B03B21EC45DB100358042 /* Assets.xcassets */; };
+		7440C2911F649F5E008B3C91 /* FitLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7440C28F1F649F5E008B3C91 /* FitLift.xcdatamodeld */; };
 		749E6DDC1F04E260000A6F8A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DD91F04E260000A6F8A /* UIColor.swift */; };
 		749E6DDD1F04E260000A6F8A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DDA1F04E260000A6F8A /* UIImage.swift */; };
 		749E6DDE1F04E260000A6F8A /* ZAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DDB1F04E260000A6F8A /* ZAlertView.swift */; };
@@ -69,7 +69,6 @@
 		743B033E1EC45BB300358042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		743B03401EC45BB300358042 /* StartMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
 		743B03431EC45BB300358042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		743B03461EC45BB300358042 /* FitLift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitLift.xcdatamodel; sourceTree = "<group>"; };
 		743B034B1EC45BB300358042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		743B034D1EC45BB300358042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		743B03521EC45BB300358042 /* FitLiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitLiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +99,7 @@
 		743B03A41EC45D4A00358042 /* TransitionDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
 		743B03B01EC45D8500358042 /* Demo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Demo.storyboard; sourceTree = "<group>"; };
 		743B03B21EC45DB100358042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7440C2901F649F5E008B3C91 /* FitLift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitLift.xcdatamodel; sourceTree = "<group>"; };
 		749E6DD91F04E260000A6F8A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		749E6DDA1F04E260000A6F8A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		749E6DDB1F04E260000A6F8A /* ZAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAlertView.swift; sourceTree = "<group>"; };
@@ -168,9 +168,9 @@
 				74D0D9611EC9A1D00016A80F /* Controls */,
 				749E6DE11F0F9557000A6F8A /* LoadingOverlay.swift */,
 				743B034A1EC45BB300358042 /* LaunchScreen.storyboard */,
+				7440C28F1F649F5E008B3C91 /* FitLift.xcdatamodeld */,
 				743B03B21EC45DB100358042 /* Assets.xcassets */,
 				743B034D1EC45BB300358042 /* Info.plist */,
-				743B03451EC45BB300358042 /* FitLift.xcdatamodeld */,
 			);
 			path = FitLift;
 			sourceTree = "<group>";
@@ -588,7 +588,6 @@
 				74CD38C91ED207CB007A7D93 /* WeightTextField.swift in Sources */,
 				749E6DDE1F04E260000A6F8A /* ZAlertView.swift in Sources */,
 				743B03411EC45BB300358042 /* StartMenuViewController.swift in Sources */,
-				743B03471EC45BB300358042 /* FitLift.xcdatamodeld in Sources */,
 				743B037A1EC45D1300358042 /* WorkoutsTableViewController.swift in Sources */,
 				749E6DDD1F04E260000A6F8A /* UIImage.swift in Sources */,
 				743B03AC1EC45D4A00358042 /* ConstraintsHelper.swift in Sources */,
@@ -605,6 +604,7 @@
 				743B03AE1EC45D4A00358042 /* SubviewsForEach.swift in Sources */,
 				74D06D0F1EC7D05D000CEDE1 /* Constants.swift in Sources */,
 				743B03771EC45D0A00358042 /* WorkoutsViewController.swift in Sources */,
+				7440C2911F649F5E008B3C91 /* FitLift.xcdatamodeld in Sources */,
 				743B03A81EC45D4A00358042 /* PageCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,12 +884,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		743B03451EC45BB300358042 /* FitLift.xcdatamodeld */ = {
+		7440C28F1F649F5E008B3C91 /* FitLift.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				743B03461EC45BB300358042 /* FitLift.xcdatamodel */,
+				7440C2901F649F5E008B3C91 /* FitLift.xcdatamodel */,
 			);
-			currentVersion = 743B03461EC45BB300358042 /* FitLift.xcdatamodel */;
+			currentVersion = 7440C2901F649F5E008B3C91 /* FitLift.xcdatamodel */;
 			path = FitLift.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

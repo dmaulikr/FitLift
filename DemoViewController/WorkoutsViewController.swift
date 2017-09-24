@@ -7,11 +7,20 @@ import CoreData
 
 class WorkoutsViewController: ExpandingViewController {
   
+  //CoreData variables
+  
+  
   typealias ItemInfo = (imageName: String, title: String)
   fileprivate var cellsIsOpen = [Bool]()
   fileprivate let items: [ItemInfo] = [("item0", "Boston"),("item1", "New York"),("item2", "San Francisco"),("item3", "Washington")]
   
   @IBOutlet weak var pageLabel: UILabel!
+  
+  required init?(coder aDecoder: NSCoder) {
+    
+    super.init(coder: aDecoder)
+    
+  }
 }
 
 // MARK: life cicle
@@ -22,10 +31,29 @@ extension WorkoutsViewController {
     itemSize = CGSize(width: 256, height: 335)
     super.viewDidLoad()
     
+    //print("Workouts viewDidLoad")
+    
     registerCell()
     fillCellIsOpeenArry()
     addGestureToView(collectionView!)
     configureNavBar()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    //print("Workouts viewWillAppear")
+    addGestureToView(collectionView!)
+  }
+  
+  func getLastWorkout() -> SavedWorkout? {
+    
+    if let data = UserDefaults.standard.data(forKey: "savedWorkout"),
+      let lastWorkout = NSKeyedUnarchiver.unarchiveObject(with: data) as? SavedWorkout {
+      print("Last workout: \(lastWorkout.workout.name)")
+      return lastWorkout
+    } else {
+      print("No Previous Workout Found!")
+      return nil
+    }
   }
 }
 
@@ -45,9 +73,22 @@ extension WorkoutsViewController {
     }
   }
   
-  fileprivate func getViewController() -> ExpandingTableViewController {
+  fileprivate func getViewController() -> WorkoutsTableViewController {
     let storyboard = UIStoryboard(storyboard: .Main)
     let toViewController: WorkoutsTableViewController = storyboard.instantiateViewController()
+    toViewController.workout = allWorkouts[currentIndex]
+    
+    if let lastSavedWorkout = getLastWorkout() {
+      if lastSavedWorkout.workout.name == toViewController.workout.name {
+        toViewController.previousWorkout = lastSavedWorkout
+        toViewController.previousCompletionCounter = lastSavedWorkout.completionCounter
+      } else {
+        print("User is loading a different workout to the previous one")
+      }
+    } else {
+      print("WE AINT FIND SHIT")
+    }
+    
     return toViewController
   }
   
@@ -75,10 +116,12 @@ extension WorkoutsViewController {
   func swipeHandler(_ sender: UISwipeGestureRecognizer) {
     let indexPath = IndexPath(row: currentIndex, section: 0)
     guard let cell  = collectionView?.cellForItem(at: indexPath) as? DemoCollectionViewCell else { return }
+    
+    cell.workoutDescriptionLabel.text = allWorkouts[currentIndex].longDescription
     // double swipe Up transition
     if cell.isOpened == true && sender.direction == .up {
-      let upcomingTableViewController = getViewController() as! WorkoutsTableViewController
-      upcomingTableViewController.workout = allWorkouts[indexPath.row]
+      let upcomingTableViewController = getViewController()
+      
       pushToViewController(upcomingTableViewController)
       
       if let rightButton = navigationItem.rightBarButtonItem as? AnimatingBarButton {

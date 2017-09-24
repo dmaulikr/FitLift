@@ -15,6 +15,8 @@ class DemoCollectionViewCell: BasePageCollectionCell {
   @IBOutlet var leftView: UILabel!
   @IBOutlet var rightView: UILabel!
   
+  @IBOutlet var workoutDescriptionLabel: UILabel!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
       

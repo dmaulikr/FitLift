@@ -10,6 +10,8 @@ import UIKit
 
 class WeightTextField: UITextField,UITextFieldDelegate {
   
+  var weight: Float = 0.0
+  
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     
     let maxCharacterCount = 3
@@ -46,6 +48,8 @@ class WeightTextField: UITextField,UITextFieldDelegate {
     else if(!textField.text!.contains(".")) {
       textField.text!.append(".0")
     }
+    
+    weight = Float(textField.text!)!
     
     textField.text?.append("kg")
     self.endEditing(true)

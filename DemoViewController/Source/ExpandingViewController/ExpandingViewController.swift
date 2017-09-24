@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 /// UIViewController with UICollectionView with custom transition method
 open class ExpandingViewController: UIViewController {
@@ -42,7 +43,7 @@ extension ExpandingViewController {
   open override func viewDidLoad() {
     super.viewDidLoad()
     commonInit()
- }
+  }
 }
 
 // MARK: Transition
@@ -52,12 +53,12 @@ public extension ExpandingViewController {
   /**
    Pushes a view controller onto the receiver’s stack and updates the display with custom animation.
    
-   - parameter viewController: The table view controller to push onto the stack. 
+   - parameter viewController: The table view controller to push onto the stack.
    */
-  func pushToViewController(_ viewController: ExpandingTableViewController) {
+  internal func pushToViewController(_ viewController: WorkoutsTableViewController) {
     guard let collectionView = self.collectionView,
-    let navigationController = self.navigationController else {
-      return
+      let navigationController = self.navigationController else {
+        return
     }
     
     viewController.transitionDriver = transitionDriver
@@ -71,8 +72,8 @@ public extension ExpandingViewController {
                                                    backImage: backImage,
                                                    headerHeight: viewController.headerHeight,
                                                    insets: tabBarHeight + stausBarHeight) { headerView in
-      viewController.tableView.tableHeaderView = headerView
-      self.navigationController?.pushViewController(viewController, animated: false)
+                                                    viewController.tableView.tableHeaderView = headerView
+                                                    self.navigationController?.pushViewController(viewController, animated: false)
     }
   }
 }
@@ -91,7 +92,7 @@ extension ExpandingViewController {
                                                      delegate: self)
     if #available(iOS 10.0, *) {
       collectionView?.isPrefetchingEnabled = false
-    } 
+    }
     transitionDriver = TransitionDriver(view: view)
   }
 }
@@ -105,7 +106,7 @@ extension ExpandingViewController {
     let imageFrame = CGRect(origin: CGPoint(x: 0, y: 0), size: imageSize)
     return viewController.view.takeSnapshot(imageFrame)
   }
-
+  
 }
 
 // MARK: UICollectionViewDataSource
@@ -128,7 +129,7 @@ extension ExpandingViewController: UICollectionViewDataSource, UICollectionViewD
   }
 }
 
-// MARK: UIScrollViewDelegate 
+// MARK: UIScrollViewDelegate
 
 extension ExpandingViewController {
   

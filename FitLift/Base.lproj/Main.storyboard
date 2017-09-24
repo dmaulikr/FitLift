@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xH3-HT-FhH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xH3-HT-FhH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -217,6 +217,9 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="weightsDoneEditing:" destination="SNa-t5-oU8" eventType="editingDidEnd" id="gi2-Fh-hy5"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <constraints>
@@ -261,7 +264,7 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="baY-Bb-ri7">
                             <connections>
-                                <action selector="cancelButtonPressed:" destination="SNa-t5-oU8" id="5dW-Uo-75l"/>
+                                <action selector="backButtonHandler:" destination="SNa-t5-oU8" id="0BY-tF-vHJ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Uqd-2C-4k2">
