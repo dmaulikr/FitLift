@@ -63,10 +63,10 @@ class SettingsViewController: UIViewController {
     // Do any additional setup after loading the view.
     
     if let settingMetric = getMetricSetting() {
-      print("settingMetric found!, it's \(settingMetric)")
+//      print("settingMetric found!, it's \(settingMetric)")
       metricOptionSwitch.rightSelected = !settingMetric
     } else {
-      print("settingMetric not found")
+//      print("settingMetric not found")
     }
   }
   

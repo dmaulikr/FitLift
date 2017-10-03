@@ -27,13 +27,19 @@ class WorkoutsTableViewController: ExpandingTableViewController {
   var weightsForTextFields: [Float] = []
   
   //CoreData variables
-  //WHY CANT I FIGURE THIS OUT, SCREW IT I'LL USE USERDEFAULTS
+  //SCREW COREDATA COMPATABILITY
+  //Userdefault variables
+  let settingMetric = true //true for kg, false for lbs because coredata gave me enum cancer
   
   fileprivate var scrollOffsetY: CGFloat = 0
   
   override func viewDidLoad() {
     
     super.viewDidLoad()
+    
+    if let settingMetric = getMetricSetting() {
+      print("settingMetric found, it's \(settingMetric)")
+    }
     
     configureNavBar()
     let image1 = Asset.backgroundImage.image
@@ -76,7 +82,7 @@ class WorkoutsTableViewController: ExpandingTableViewController {
     weightsForTextFields[row] = weightTextView.weight
     workout.routine[currentWorkoutRoutine].exercises[row].weight = weightTextView.weight
     
-    print("User finished editing weight at row: \(row)")
+//    print("User finished editing weight at row: \(row)")
     
   }
 }
@@ -317,13 +323,13 @@ extension WorkoutsTableViewController {
     //testSavedData()
   }
   
-  func testSavedData() {
+  func getMetricSetting() -> Bool? {
     
-    if let data = UserDefaults.standard.data(forKey: "savedWorkout"),
-      let lastWorkout = NSKeyedUnarchiver.unarchiveObject(with: data) as? SavedWorkout {
-      print(lastWorkout.workout.routine)
+    if let data = UserDefaults.standard.data(forKey: "settingMetric"),
+      let savedSettingMetric = NSKeyedUnarchiver.unarchiveObject(with: data) as? Bool {
+      return savedSettingMetric
     } else {
-      print("There is an issue")
+      return nil
     }
   }
 }
