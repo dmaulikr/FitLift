@@ -36,6 +36,8 @@
 		743B03B11EC45D8500358042 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743B03B01EC45D8500358042 /* Demo.storyboard */; };
 		743B03B31EC45DB100358042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743B03B21EC45DB100358042 /* Assets.xcassets */; };
 		7440C2911F649F5E008B3C91 /* FitLift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7440C28F1F649F5E008B3C91 /* FitLift.xcdatamodeld */; };
+		7490F34A1F7DEAFD0045E41B /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490F3491F7DEAFD0045E41B /* Switch.swift */; };
+		7490F34C1F7DED600045E41B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490F34B1F7DED600045E41B /* SettingsViewController.swift */; };
 		749E6DDC1F04E260000A6F8A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DD91F04E260000A6F8A /* UIColor.swift */; };
 		749E6DDD1F04E260000A6F8A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DDA1F04E260000A6F8A /* UIImage.swift */; };
 		749E6DDE1F04E260000A6F8A /* ZAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E6DDB1F04E260000A6F8A /* ZAlertView.swift */; };
@@ -100,6 +102,8 @@
 		743B03B01EC45D8500358042 /* Demo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Demo.storyboard; sourceTree = "<group>"; };
 		743B03B21EC45DB100358042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7440C2901F649F5E008B3C91 /* FitLift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitLift.xcdatamodel; sourceTree = "<group>"; };
+		7490F3491F7DEAFD0045E41B /* Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
+		7490F34B1F7DED600045E41B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		749E6DD91F04E260000A6F8A /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		749E6DDA1F04E260000A6F8A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		749E6DDB1F04E260000A6F8A /* ZAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZAlertView.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			children = (
 				749E6DDF1F0612AE000A6F8A /* DOAlertController.swift */,
 				743B03401EC45BB300358042 /* StartMenuViewController.swift */,
+				7490F34B1F7DED600045E41B /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			children = (
 				74D0D95F1EC9A1CC0016A80F /* BubbleRepCounter.swift */,
 				74CD38C81ED207CB007A7D93 /* WeightTextField.swift */,
+				7490F3491F7DEAFD0045E41B /* Switch.swift */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -577,6 +583,7 @@
 			files = (
 				743B03AB1EC45D4A00358042 /* ConfigurationHelper.swift in Sources */,
 				743B03A71EC45D4A00358042 /* PageCollectionLayout.swift in Sources */,
+				7490F34C1F7DED600045E41B /* SettingsViewController.swift in Sources */,
 				749E6DE21F0F9557000A6F8A /* LoadingOverlay.swift in Sources */,
 				74D0D9601EC9A1CC0016A80F /* BubbleRepCounter.swift in Sources */,
 				743B03891EC45D3400358042 /* StoryboardHelper.swift in Sources */,
@@ -600,6 +607,7 @@
 				743B03AF1EC45D4A00358042 /* TransitionDriver.swift in Sources */,
 				74D0D95E1EC992760016A80F /* WorkoutTableViewCell.swift in Sources */,
 				749E6DDC1F04E260000A6F8A /* UIColor.swift in Sources */,
+				7490F34A1F7DEAFD0045E41B /* Switch.swift in Sources */,
 				749E6DE01F0612AE000A6F8A /* DOAlertController.swift in Sources */,
 				743B03AE1EC45D4A00358042 /* SubviewsForEach.swift in Sources */,
 				74D06D0F1EC7D05D000CEDE1 /* Constants.swift in Sources */,

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xH3-HT-FhH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xH3-HT-FhH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Heavy</string>
+            <string>AvenirNext-UltraLightItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Start Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -28,49 +35,42 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyn-E3-tZS">
-                                <rect key="frame" x="16" y="464" width="171.5" height="101.5"/>
-                                <state key="normal" title="Workout Program"/>
+                                <rect key="frame" x="-16" y="464" width="407" height="101.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Workout Program">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="50E-KM-wkA" kind="show" identifier="mainSegue" id="KHr-f9-FwU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtO-ld-AuD">
-                                <rect key="frame" x="187.5" y="464" width="171.5" height="101.5"/>
-                                <state key="normal" title="One Time Workout"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNg-er-b6y">
-                                <rect key="frame" x="16" y="565.5" width="171.5" height="101.5"/>
-                                <state key="normal" title="Progress"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-Jy-DQP">
-                                <rect key="frame" x="187.5" y="565.5" width="171.5" height="101.5"/>
-                                <state key="normal" title="Settings"/>
+                                <rect key="frame" x="-16" y="565.5" width="407" height="101.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RNz-FC-CPh" kind="show" id="g1v-TI-dZG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UtO-ld-AuD" firstAttribute="width" secondItem="iyn-E3-tZS" secondAttribute="width" id="0p0-K4-6q7"/>
-                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="leading" secondItem="fNg-er-b6y" secondAttribute="trailing" id="5kw-mV-FRg"/>
-                            <constraint firstItem="UtO-ld-AuD" firstAttribute="leading" secondItem="iyn-E3-tZS" secondAttribute="trailing" id="A2l-xu-g1H"/>
-                            <constraint firstItem="UtO-ld-AuD" firstAttribute="top" secondItem="oFw-ld-Mch" secondAttribute="bottom" id="AyD-Wu-I6n"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A5E-Jy-DQP" secondAttribute="bottom" id="GOU-AT-zbQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UtO-ld-AuD" secondAttribute="trailing" id="Gg1-Vh-5RQ"/>
+                            <constraint firstAttribute="trailing" secondItem="A5E-Jy-DQP" secondAttribute="trailing" constant="-16" id="D5O-hT-ltw"/>
                             <constraint firstItem="oFw-ld-Mch" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Iqs-cX-WH6"/>
+                            <constraint firstItem="iyn-E3-tZS" firstAttribute="top" secondItem="oFw-ld-Mch" secondAttribute="bottom" id="JSv-mX-lm0"/>
+                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="top" secondItem="iyn-E3-tZS" secondAttribute="bottom" id="JZ0-5r-xdv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A5E-Jy-DQP" secondAttribute="bottom" id="KFt-Ow-kMa"/>
                             <constraint firstItem="oFw-ld-Mch" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NVv-DN-mKk"/>
-                            <constraint firstItem="fNg-er-b6y" firstAttribute="width" secondItem="iyn-E3-tZS" secondAttribute="width" id="NfT-Ur-tid"/>
-                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="width" secondItem="iyn-E3-tZS" secondAttribute="width" id="ORX-ap-5Lp"/>
-                            <constraint firstItem="iyn-E3-tZS" firstAttribute="top" secondItem="oFw-ld-Mch" secondAttribute="bottom" id="PLq-z7-e2S"/>
-                            <constraint firstItem="iyn-E3-tZS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rtm-qJ-RGf"/>
-                            <constraint firstItem="UtO-ld-AuD" firstAttribute="height" secondItem="iyn-E3-tZS" secondAttribute="height" id="TTi-J2-cp1"/>
-                            <constraint firstItem="fNg-er-b6y" firstAttribute="height" secondItem="iyn-E3-tZS" secondAttribute="height" id="Vnh-fJ-fWb"/>
-                            <constraint firstItem="fNg-er-b6y" firstAttribute="top" secondItem="iyn-E3-tZS" secondAttribute="bottom" id="Xpa-61-bUH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A5E-Jy-DQP" secondAttribute="trailing" id="adQ-Bv-GSE"/>
-                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="height" secondItem="iyn-E3-tZS" secondAttribute="height" id="ck2-Rd-k9U"/>
-                            <constraint firstItem="UtO-ld-AuD" firstAttribute="top" secondItem="oFw-ld-Mch" secondAttribute="bottom" id="her-3h-hdv"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fNg-er-b6y" secondAttribute="bottom" id="jtz-qk-xQV"/>
-                            <constraint firstItem="fNg-er-b6y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pIC-0P-mGo"/>
+                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="top" secondItem="iyn-E3-tZS" secondAttribute="bottom" id="XGn-Fe-JxA"/>
+                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-16" id="ad8-p6-rKH"/>
+                            <constraint firstAttribute="trailing" secondItem="iyn-E3-tZS" secondAttribute="trailing" constant="-16" id="dAt-U1-lDN"/>
+                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="height" secondItem="iyn-E3-tZS" secondAttribute="height" id="j3x-3H-fhI"/>
                             <constraint firstAttribute="trailing" secondItem="oFw-ld-Mch" secondAttribute="trailing" id="uIZ-sW-du9"/>
-                            <constraint firstItem="A5E-Jy-DQP" firstAttribute="top" secondItem="UtO-ld-AuD" secondAttribute="bottom" id="xZn-7m-pZ5"/>
+                            <constraint firstItem="iyn-E3-tZS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-16" id="z1P-vu-wNq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="87I-SZ-otL"/>
@@ -79,13 +79,58 @@
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="5ww-X2-Kdw">
+            <objects>
+                <viewController id="RNz-FC-CPh" customClass="SettingsViewController" customModule="FitLift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nDD-Hr-MD3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gf3-Uj-h9V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Chn-wS-osN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WRQ-lY-Jaz" customClass="OutlineSwitch" customModule="FitLift" customModuleProvider="target">
+                                <rect key="frame" x="94" y="224" width="187" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftText" value="Kg"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightText" value="Lbs"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="switchTriggered:" destination="RNz-FC-CPh" eventType="valueChanged" id="Ef1-gd-A2q"/>
+                                </connections>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Swh-hU-CC7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Settings" id="Gb4-FA-Iam"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="metricOptionSwitch" destination="WRQ-lY-Jaz" id="Uv4-Rn-Let"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xy3-G9-uyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150" y="747"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dd3-qe-Ga9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xH3-HT-FhH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5eW-fR-VY5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -137,7 +182,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="5IZ-kX-lqe">
-                                    <rect key="frame" x="95" y="9" width="51" height="16"/>
+                                    <rect key="frame" x="94.5" y="8.5" width="51" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="16" id="5jD-DB-N6L"/>
                                         <constraint firstAttribute="width" constant="51" id="Jxf-xb-iiE"/>

@@ -27,7 +27,7 @@ class WorkoutsTableViewController: ExpandingTableViewController {
   var weightsForTextFields: [Float] = []
   
   //CoreData variables
-  
+  //WHY CANT I FIGURE THIS OUT, SCREW IT I'LL USE USERDEFAULTS
   
   fileprivate var scrollOffsetY: CGFloat = 0
   
@@ -212,14 +212,13 @@ extension WorkoutsTableViewController {
     let bubble = sender.view as! BubbleRepCounter
     let cell = bubble.superview! as! WorkoutTableViewCell
     let row = tableView.indexPath(for: cell)!.row
-    let alertDialogTimeDelay = 0.4
+    let alertDialogTimeDelay = 3.0
     
     bubble.changeFilledReps()
     bubbleCounterInputData[row][bubble.tag - 1] = bubble.filledReps
     
     tapTimer.invalidate()
     tapTimer = Timer.scheduledTimer(timeInterval: alertDialogTimeDelay, target: self, selector: #selector(self.displayWorkoutFinishedDialog(_:)), userInfo: bubble, repeats: false)
-    
   }
   
   func displayWorkoutFinishedDialog(_ timer: Timer) {
@@ -230,6 +229,7 @@ extension WorkoutsTableViewController {
     var attemptedSets = 0
     var completedSets = 0
     
+        print("tableView row: \(self.tableView.indexPath(for: cell)!.row)")
     currentCompletionCounter[self.tableView.indexPath(for: cell)!.row] = false
     
     for subview in cell.subviews {  //Find how many sets have been attempted vs completed
